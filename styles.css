@@ -1,0 +1,180 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body { 
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh; 
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+/*Game container*/
+.game-container { 
+    background-color: rgba(32, 31, 31, 0.9);
+    box-shadow: 2px 2px 30px 2px rgb(27, 26, 26);
+    width: 1200px;
+    height: 1000px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.player-character { 
+    background-image: url("./images/elf.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute; 
+    width: 200px;
+    height: 200px;
+    top: -110px;
+    left: -60px;
+    position: relative;
+}
+
+.player-character #player-name { 
+    color: white;
+    position:absolute; 
+    bottom: 10px;
+    right: 75px;
+}
+
+.player-character #player-level { 
+    position: absolute;
+    color: white; 
+    left: 150px;
+    font-size: 40px;
+    top: 110px;
+}
+
+.player-moves { 
+    display: flex;
+    width: 100%; 
+    height: 200px; 
+    border: 1px solid white;
+    position: absolute;
+    bottom: 0px;
+    box-shadow: 1px 1px 10px 1px rgb(172, 104, 104);
+}
+
+.info { 
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+
+#moves { 
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50%);
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.move { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.move button { 
+    width: 90%;
+    height: 90%;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+}
+
+.move button:hover { 
+    cursor: pointer;
+    background-color: rgb(37, 36, 36);
+    color: rgb(197, 101, 101);
+}
+
+#player-stats div,
+#enemy-stats div { 
+    margin-top: 5px;
+    display: flex;
+    font-size: 18px;
+    width: 100px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.player-health { 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#health-bar,
+.enemy-health-bar { 
+    margin-bottom: 10px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; 
+    height: 40px; 
+    border: 1px solid rgb(44, 43, 43); 
+    background-color: rgb(125, 182, 125);
+    border-radius: 20px;
+    color: black;
+}
+
+/*New Game*/
+#new-game-button { 
+    width: 200px;
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(133, 14, 34);
+    border: 2px solid white;
+    color: white;
+    font-weight: 700;
+}
+
+#new-game-button:hover { 
+    cursor: pointer;
+    background-color: rgb(168, 61, 79);
+}
+
+/*Monster Display*/
+#monster-display { 
+    position: absolute;
+    top: 65px;
+    left: 115px;
+    width: 80%; 
+    height: 70%; 
+    border: 1px solid white; 
+    color: white;
+} 
+
+#enemy-name { 
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    color: rgb(206, 75, 75);
+}
+
+.enemy-health { 
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+}

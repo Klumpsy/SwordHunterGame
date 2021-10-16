@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sword Hunter Online</title>
+</head>
+<body>
+    <section class="game-container">
+        <div class="player-character">
+            <span id="player-name"></span>
+            <span id="player-level"></span>
+        </div>
+        <div id="monster-display">
+            <div id="enemy-name"></div>
+            <div class="enemy-health">
+                <div class="enemy-health-bar">
+                    <span id="enemy-health"></span><p>/</p><span id="enemy-total-health"></span>
+                </div>
+            </div>
+            <div id="enemy-stats">
+                <div>
+                    <p>Str:</p><span id="enemy-str"></span>
+                </div>
+                <div>
+                    <p>Int:</p><span id="enemy-int"></span>
+                </div>
+                <div>
+                    <p>Def:</p><span id="enemy-def"></span>
+                </div>
+            </div>
+            <div id="enemy-image">
+
+            </div>
+        </div>
+        <div class="player-moves">
+            <div class="info" id="stats">
+                <div class="player-health">
+                    <h3>Health</h3>
+                    <div id="health-bar">
+                        <span id="health"></span><p>/</p><span id="total-health"></span>
+                    </div>
+                    <div id="player-stats">
+                        <div>
+                            <p>Str:</p><span id="str"></span>
+                        </div>
+                        <div>
+                            <p>Int:</p><span id="int"></span>
+                        </div>
+                        <div>
+                            <p>Def:</p><span id="def"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info" id="moves">
+                <div class="move" id="slash"><button>Slash</button></div>
+                <div class="move" id="defence"><button>Defence</button></div>
+                <div class="move" id="heal"><button>Heal</button></div>
+                <div class="move" id="magic"><button>Magic Attack</button></div>
+            </div>
+            <div class="info" id="inventory"></div>
+        </div>
+        <div class="player-inventory"></div>
+    </section>
+    <section>
+        <button id="new-game-button">New Game</button>
+    </section>
+    <script src="playerHandler.js"></script>
+    <script src="monsterHandler.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
