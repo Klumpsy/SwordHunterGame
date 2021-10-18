@@ -28,6 +28,23 @@ body {
     position: relative;
 }
 
+#defeated-monster-score { 
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    right: 10px;
+    top: 10px;
+    color: rgb(89, 147, 194);
+}
+
+#defeated-enemy-count { 
+    font-size: 40px;
+}
+
 .player-character { 
     background-image: url("./images/elf.png");
     background-repeat: no-repeat;
@@ -41,11 +58,30 @@ body {
     position: relative;
 }
 
-.player-character #player-name { 
+.player-exp-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     color: white;
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    bottom: -40px;
+}
+
+#player-exp-div { 
+    display: flex;
+    flex-direction: row;
+}
+
+.player-character #player-name { 
+    color: rgb(82, 221, 147);
     position:absolute; 
     bottom: 10px;
-    right: 75px;
+    right: 60px;
+    font-weight: 900;
 }
 
 .player-character #player-level { 
@@ -90,18 +126,34 @@ body {
     height: 100%;
 }
 
+#slash button{ 
+    background-image: url("./images/Slash.png");
+}
+
+#defence button{ 
+    background-image: url("./images/Block.png");
+}
+
+#heal button{ 
+    background-image: url("./images/heal.png");
+}
+
+#magic button{ 
+    background-image: url("./images/magic.png");
+}
+
 .move button { 
-    width: 90%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
     height: 90%;
-    color: white;
-    background-color: black;
     font-size: 18px;
 }
 
 .move button:hover { 
     cursor: pointer;
-    background-color: rgb(37, 36, 36);
-    color: rgb(197, 101, 101);
+    border: 2px solid rgb(78, 143, 112);
 }
 
 #player-stats div,
@@ -123,19 +175,44 @@ body {
     color: white;
 }
 
-#health-bar,
-.enemy-health-bar { 
-    margin-bottom: 10px;;
+#health-bar { 
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px; 
-    height: 40px; 
-    border: 1px solid rgb(44, 43, 43); 
-    background-color: rgb(125, 182, 125);
-    border-radius: 20px;
+}
+
+.health-display{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    width: 100%;
+    height: 30px;
+    color: black;
+    font-weight: 700;
+}
+
+#health-inner, 
+#enemy-health-inner { 
+    width: 300px;
+    height: 30px;
     color: black;
 }
+
+meter {
+    -moz-appearance: none;
+    width: 550px;
+    height: 25px;
+    border-radius: 20px;
+  }
+
+  meter::-moz-meter-bar {
+    background-color: rgb(72, 180, 90);
+    box-shadow: 1px 1px 7px 1px rgb(73, 71, 71) inset;
+    background-size: 100% 100%;
+    border-radius: 20px;
+  }
 
 /*New Game*/
 #new-game-button { 
@@ -173,8 +250,47 @@ body {
     color: rgb(206, 75, 75);
 }
 
+#enemy-image { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+#enemy-image img { 
+    width: 100%;
+}
+
 .enemy-health { 
     width: 100%; 
     display: flex;
     justify-content: center;
 }
+
+.updates { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    height: 120px;
+    border-top: 3px solid rgb(197, 92, 92);
+    position: absolute;
+    bottom: 0;
+    font-weight: 800;
+    transition: 1s ease-in-out;
+    overflow-y: scroll;
+}
+
+.update-box-enemy {
+    color: rgb(228, 90, 90);
+    margin: 5px;
+}
+
+.update-box-player { 
+    color: rgb(76, 204, 140);
+    margin: 5px;
+}
+

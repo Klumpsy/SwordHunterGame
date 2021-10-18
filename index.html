@@ -12,13 +12,20 @@
         <div class="player-character">
             <span id="player-name"></span>
             <span id="player-level"></span>
+            <div class="player-exp-container">
+                <h5>Next level:</h5>
+                <div id="player-exp-div"><span id="player-exp"></span><p>/</p><span id="player-exp-needed"></span></div>
+            </div>
+        </div>
+        <div id="defeated-monster-score">
+            <h5>Defeated:</h5>
+            <span id="defeated-enemy-count">0</span>
         </div>
         <div id="monster-display">
             <div id="enemy-name"></div>
             <div class="enemy-health">
-                <div class="enemy-health-bar">
-                    <span id="enemy-health"></span><p>/</p><span id="enemy-total-health"></span>
-                </div>
+                    <meter id="enemy-health-inner" min="0"></meter>
+                    <div class="health-display"><span id="enemy-health"></span><p>/</p><span id="enemy-total-health"></span></div>
             </div>
             <div id="enemy-stats">
                 <div>
@@ -34,13 +41,15 @@
             <div id="enemy-image">
 
             </div>
+            <section class="updates"></section>
         </div>
         <div class="player-moves">
             <div class="info" id="stats">
                 <div class="player-health">
                     <h3>Health</h3>
                     <div id="health-bar">
-                        <span id="health"></span><p>/</p><span id="total-health"></span>
+                        <meter id="health-inner" min="0"></meter>
+                        <div class="health-display"><span id="health"></span><p>/</p><span id="total-health"></span></div>
                     </div>
                     <div id="player-stats">
                         <div>
@@ -56,10 +65,10 @@
                 </div>
             </div>
             <div class="info" id="moves">
-                <div class="move" id="slash"><button>Slash</button></div>
-                <div class="move" id="defence"><button>Defence</button></div>
-                <div class="move" id="heal"><button>Heal</button></div>
-                <div class="move" id="magic"><button>Magic Attack</button></div>
+                <div class="move" id="slash"><button></button></div>
+                <div class="move" id="defence"><button></button></div>
+                <div class="move" id="heal"><button></button></div>
+                <div class="move" id="magic"><button></button></div>
             </div>
             <div class="info" id="inventory"></div>
         </div>
@@ -68,8 +77,8 @@
     <section>
         <button id="new-game-button">New Game</button>
     </section>
-    <script src="playerHandler.js"></script>
     <script src="monsterHandler.js"></script>
+    <script src="playerHandler.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
