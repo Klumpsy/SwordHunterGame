@@ -37,10 +37,14 @@
                 <div>
                     <p>Def:</p><span id="enemy-def"></span>
                 </div>
+                <div>
+                    <p>MDef:</p><span id="enemy-mdef"></span>
+                </div>
             </div>
             <div id="enemy-image">
 
             </div>
+            <section class="loot-updates"></section>
             <section class="updates"></section>
         </div>
         <div class="player-moves">
@@ -50,6 +54,11 @@
                     <div id="health-bar">
                         <meter id="health-inner" min="0"></meter>
                         <div class="health-display"><span id="health"></span><p>/</p><span id="total-health"></span></div>
+                    </div>
+                    <h4>Mana</h4>
+                    <div id="mana-bar">
+                        <meter id="mana-inner" min="0"></meter>
+                        <div class="mana-display"><span id="mana"></span><p>/</p><span id="total-mana"></span></div>
                     </div>
                     <div id="player-stats">
                         <div>
@@ -70,7 +79,28 @@
                 <div class="move" id="heal"><button></button></div>
                 <div class="move" id="magic"><button></button></div>
             </div>
-            <div class="info" id="inventory"></div>
+            <div class="info" id="inventory">
+                <div class="potion-info-container">
+                    <h5>Health</br>Potions</h5>
+                    <div class="potion" id="health-potion"><img src="./images/Health.png" alt="Health Potion"></div>
+                    <span id="health-potion-count"></span>
+                </div>
+                <div class="potion-info-container">
+                    <h5>Strength</br>Potions</h5>
+                    <div class="potion" id="strength-potion"><img src="./images/Strength.png" alt="Strength Potion"></div>
+                    <span id="strength-potion-count"></span>
+                </div>
+                <div class="potion-info-container">
+                    <h5>Mana</br>Potions</h5>
+                    <div class="potion" id="mana-potion"><img src="./images/mana.png" alt="Mana Potion"></div>
+                    <span id="mana-potion-count"></span>
+                </div>
+                <div class="potion-info-container">
+                    <h5>Death</br>Potions</h5>
+                    <div class="potion" id="death-potion"><img src="./images//Death.png" alt="Death Potion"></div>
+                    <span id="death-potion-count"></span>
+                </div>
+            </div>
         </div>
         <div class="player-inventory"></div>
     </section>
